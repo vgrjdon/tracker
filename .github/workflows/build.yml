@@ -66,12 +66,12 @@ jobs:
           ${{ runner.os }}-${{ env.cache-name }}-
     - name: Cache cargo build
       uses: actions/cache@v1
-      if: runner.os != 'macOS'  # cache doesn't seem to behave nicely on macOS, see: https://github.com/ActivityWatch/aw-server-rust/issues/180
+      if: runner.os != 'macOS'  # cache doesn't seem to behave nicely on macOS, see: https://github.com/aceofwork/aw-server-rust/issues/180
       env:
         cache-name: cargo-build-target
       with:
         path: aw-server-rust/target
-        # key needs to contain rustc_hash due to https://github.com/ActivityWatch/aw-server-rust/issues/180
+        # key needs to contain rustc_hash due to https://github.com/aceofwork/aw-server-rust/issues/180
         key: ${{ runner.os }}-${{ env.cache-name }}-${{ steps.toolchain.outputs.rustc_hash }}-${{ hashFiles('**/Cargo.lock') }}
         restore-keys: |
           ${{ runner.os }}-${{ env.cache-name }}-${{ steps.toolchain.outputs.rustc_hash }}-
@@ -132,11 +132,11 @@ jobs:
       if: startsWith(runner.os, 'macOS')
       run: |
         source venv/bin/activate
-        make dist/ActivityWatch.dmg;
-        mv dist/ActivityWatch.dmg dist/activitywatch-$(scripts/package/getversion.sh)-macos-x86_64.dmg;
+        make dist/aceofwork.dmg;
+        mv dist/aceofwork.dmg dist/aceofwork-$(scripts/package/getversion.sh)-macos-x86_64.dmg;
     - name: Upload packages
       uses: actions/upload-artifact@v2-preview
       with:
         name: builds-${{ runner.os }}-py${{ matrix.python_version }}
-        path: dist/activitywatch-*.*
+        path: dist/aceofwork-*.*
 

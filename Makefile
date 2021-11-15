@@ -1,9 +1,9 @@
 # =====================================
-# Makefile for the ActivityWatch bundle
+# Makefile for the aceofwork bundle
 # =====================================
 #
 # [GUIDE] How to install from source:
-#  - https://activitywatch.readthedocs.io/en/latest/installing-from-source.html
+#  - https://aceofwork.readthedocs.io/en/latest/installing-from-source.html
 #
 # We recommend creating and activating a Python virtualenv before building.
 # Instructions on how to do this can be found in the guide linked above.
@@ -42,7 +42,7 @@ build:
 	make --directory=aw-server build SKIP_WEBUI=$(SKIP_WEBUI)
 	make --directory=aw-server-rust build SKIP_WEBUI=$(SKIP_WEBUI)
 	make --directory=aw-qt build
-#   The below is needed due to: https://github.com/ActivityWatch/activitywatch/issues/173
+#   The below is needed due to: https://github.com/aceofwork/aceofwork/issues/173
 	make --directory=aw-client build
 	make --directory=aw-core build
 #	Needed to ensure that the server has the correct version set
@@ -103,7 +103,7 @@ test:
 test-integration:
 	# TODO: Move "integration tests" to aw-client
 	# FIXME: For whatever reason the script stalls on Appveyor
-	#        Example: https://ci.appveyor.com/project/ErikBjare/activitywatch/build/1.0.167/job/k1ulexsc5ar5uv4v
+	#        Example: https://ci.appveyor.com/project/ErikBjare/aceofwork/build/1.0.167/job/k1ulexsc5ar5uv4v
 	pytest ./scripts/tests/integration_tests.py ./aw-server/tests/ -v
 
 ICON := "aw-qt/media/logo/logo.png"
@@ -124,36 +124,36 @@ aw-qt/media/logo/logo.icns:
 	rm -R build/MyIcon.iconset
 	mv build/MyIcon.icns aw-qt/media/logo/logo.icns
 
-dist/ActivityWatch.dmg: dist/ActivityWatch.app
+dist/aceofwork.dmg: dist/aceofwork.app
 	pip install dmgbuild
-	dmgbuild -s scripts/package/dmgbuild-settings.py -D app=dist/ActivityWatch.app "ActivityWatch" dist/ActivityWatch.dmg
+	dmgbuild -s scripts/package/dmgbuild-settings.py -D app=dist/aceofwork.app "aceofwork" dist/aceofwork.dmg
 
-dist/ActivityWatch.app: aw-qt/media/logo/logo.icns
+dist/aceofwork.app: aw-qt/media/logo/logo.icns
 	pip install git+git://github.com/pyinstaller/pyinstaller.git@55c8855d9db0fa596ceb28505f3ee2f402ecd4da
 	pyinstaller --clean --noconfirm --windowed aw.spec
 
 package:
-	mkdir -p dist/activitywatch
+	mkdir -p dist/aceofwork
 #
 	make --directory=aw-watcher-afk package
-	cp -r aw-watcher-afk/dist/aw-watcher-afk dist/activitywatch
+	cp -r aw-watcher-afk/dist/aw-watcher-afk dist/aceofwork
 #
 	make --directory=aw-watcher-window package
-	cp -r aw-watcher-window/dist/aw-watcher-window dist/activitywatch
+	cp -r aw-watcher-window/dist/aw-watcher-window dist/aceofwork
 #
 	make --directory=aw-server package
-	cp -r aw-server/dist/aw-server dist/activitywatch
+	cp -r aw-server/dist/aw-server dist/aceofwork
 #
 	make --directory=aw-server-rust package
-	mkdir -p dist/activitywatch/aw-server-rust
-	cp -r aw-server-rust/target/package/* dist/activitywatch/aw-server-rust
+	mkdir -p dist/aceofwork/aw-server-rust
+	cp -r aw-server-rust/target/package/* dist/aceofwork/aw-server-rust
 #
 	make --directory=aw-qt package
-	cp -r aw-qt/dist/aw-qt/. dist/activitywatch
-# Remove problem-causing binaries, see https://github.com/ActivityWatch/activitywatch/issues/161
-	rm -f dist/activitywatch/libdrm.so.2
+	cp -r aw-qt/dist/aw-qt/. dist/aceofwork
+# Remove problem-causing binaries, see https://github.com/aceofwork/aceofwork/issues/161
+	rm -f dist/aceofwork/libdrm.so.2
 # Remove unecessary files
-	rm -rf dist/activitywatch/pytz
+	rm -rf dist/aceofwork/pytz
 # Builds zips and setups
 	bash scripts/package/package-all.sh
 

@@ -16,7 +16,7 @@ assignees: ''
 -->
 
 <!-- Checked checkbox should look like this: [x] -->
- - [ ] I am on the [latest](https://github.com/ActivityWatch/activitywatch/releases/latest) ActivityWatch version.
+ - [ ] I am on the [latest](https://github.com/aceofwork/aceofwork/releases/latest) aceofwork version.
  - [ ] I have searched the issues of this repo and believe that this is not a duplicate.
 
 
@@ -26,7 +26,7 @@ assignees: ''
 -->
 
 - **OS name and version**: <!-- Replace this comment with OS name + version -->
-- **ActivityWatch version**: <!-- Replace this comment with the ActivityWatch version (found at the bottom of the Web UI) -->
+- **aceofwork version**: <!-- Replace this comment with the aceofwork version (found at the bottom of the Web UI) -->
 
 ## Describe the bug
 <!-- A clear and concise description of what the bug is. -->
@@ -48,9 +48,9 @@ assignees: ''
   If applicable, add screenshots or logs to help explain your problem.
 
   Logs can be found in different places depending on platform:
-   - Windows: `C:\Users\<USER>\AppData\Local\ActivityWatch\Logs`
-   - macOS: `/Users/<USER>/Library/Logs/activitywatch`
-   - Linux: `/home/<USER>/.cache/activitywatch/log`
+   - Windows: `C:\Users\<USER>\AppData\Local\aceofwork\Logs`
+   - macOS: `/Users/<USER>/Library/Logs/aceofwork`
+   - Linux: `/home/<USER>/.cache/aceofwork/log`
   They can be opened with any plain text editor.
 -->
 

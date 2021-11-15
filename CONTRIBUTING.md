@@ -16,16 +16,16 @@ How to Contribute
 
 ## Getting started
 
-To develop on ActivityWatch you'll first want to install from source. To do so, follow [the guide in the documentation](https://activitywatch.readthedocs.io/en/latest/installing-from-source.html).
+To develop on aceofwork you'll first want to install from source. To do so, follow [the guide in the documentation](https://aceofwork.readthedocs.io/en/latest/installing-from-source.html).
 
-You might then want to read about the [architecture](https://activitywatch.readthedocs.io/en/latest/architecture.html) and the [data model](https://activitywatch.readthedocs.io/en/latest/buckets-and-events.html).
+You might then want to read about the [architecture](https://aceofwork.readthedocs.io/en/latest/architecture.html) and the [data model](https://aceofwork.readthedocs.io/en/latest/buckets-and-events.html).
 
-If you want some code examples for how to write watchers or other types of clients, see the [documentation for writing watchers](https://docs.activitywatch.net/en/latest/examples/writing-watchers.html).
+If you want some code examples for how to write watchers or other types of clients, see the [documentation for writing watchers](https://docs.aceofwork.net/en/latest/examples/writing-watchers.html).
 
 
 ## How you can help
 
-There are many ways to contribute to ActivityWatch:
+There are many ways to contribute to aceofwork:
 
  - Work on issues labeled [`good first issue`][good first issue] or [`help wanted`][help wanted], these are especially suited for new contributors.
  - Fix [`bugs`][bugs].
@@ -36,35 +36,35 @@ There are many ways to contribute to ActivityWatch:
  - Build the ecosystem.
    - Examples: New watchers, tools to analyze data, tools to import data from other sources, etc.
 
-If you're interested in what's next for ActivityWatch, have a look at our [roadmap][roadmap] and [milestones][milestones].
+If you're interested in what's next for aceofwork, have a look at our [roadmap][roadmap] and [milestones][milestones].
 
 Most of the above will get you up on our [contributor stats page][contributors] as thanks!
 
-[good first issue]: https://github.com/ActivityWatch/activitywatch/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22
-[help wanted]: https://github.com/ActivityWatch/activitywatch/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22
-[bugs]: https://github.com/ActivityWatch/activitywatch/issues?q=is%3Aissue+is%3Aopen+label%3A%22bugs%22
-[milestones]: https://github.com/ActivityWatch/activitywatch/milestones
-[roadmap]: https://github.com/orgs/ActivityWatch/projects/2
-[requested features]: https://forum.activitywatch.net/c/features
-[contributors]: http://activitywatch.net/contributors/
+[good first issue]: https://github.com/aceofwork/aceofwork/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22
+[help wanted]: https://github.com/aceofwork/aceofwork/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22
+[bugs]: https://github.com/aceofwork/aceofwork/issues?q=is%3Aissue+is%3Aopen+label%3A%22bugs%22
+[milestones]: https://github.com/aceofwork/aceofwork/milestones
+[roadmap]: https://github.com/orgs/aceofwork/projects/2
+[requested features]: https://forum.aceofwork.net/c/features
+[contributors]: http://aceofwork.net/contributors/
 
 
 ## Filing an issue
 
 Thanks for wanting to help out with squashing bugs and more by filing an issue.
 
-When filing an issue, it's important to use an [issue template](https://github.com/ActivityWatch/activitywatch/issues/new/choose). This ensures that we have the information we need to understand the issue, so we don't have to ask for tons of follow-up questions, so we can fix the issue faster!
+When filing an issue, it's important to use an [issue template](https://github.com/aceofwork/aceofwork/issues/new/choose). This ensures that we have the information we need to understand the issue, so we don't have to ask for tons of follow-up questions, so we can fix the issue faster!
 
 
 ## Getting paid
 
 We're experimenting with paying our contributors using funds we've raised from donations and grants. 
 
-The idea is you track your work with ActivityWatch (and ensure it gets categorized correctly), then you modify the [working_hours.py](https://github.com/ActivityWatch/aw-client/blob/master/examples/working_hours.py) script to use your category rule and generate a report of time worked per day and the matching events.
+The idea is you track your work with aceofwork (and ensure it gets categorized correctly), then you modify the [working_hours.py](https://github.com/aceofwork/aw-client/blob/master/examples/working_hours.py) script to use your category rule and generate a report of time worked per day and the matching events.
 
-If you've contributed to ActivityWatch (for a minimum of 10h) and want to get paid for your time, contact us!
+If you've contributed to aceofwork (for a minimum of 10h) and want to get paid for your time, contact us!
 
-You can read more about this experiment on [the forum](https://forum.activitywatch.net/t/getting-paid-with-activitywatch/986) and in [the issues](https://github.com/ActivityWatch/activitywatch/issues/458).
+You can read more about this experiment on [the forum](https://forum.aceofwork.net/t/getting-paid-with-aceofwork/986) and in [the issues](https://github.com/aceofwork/aceofwork/issues/458).
 
 
 ## Code of Conduct
@@ -96,7 +96,7 @@ Examples:
  - docs: improved query documentation 
 ```
 
-This guideline was adopted in [issue #391](https://github.com/ActivityWatch/activitywatch/issues/391).
+This guideline was adopted in [issue #391](https://github.com/aceofwork/aceofwork/issues/391).
 
 
 ## Questions?
@@ -107,6 +107,6 @@ If you have any questions, you can:
  - Post on [the forum][forum] or [GitHub Discussions][github discussions].
  - (as a last resort/if needed) Email one of the maintainers at: [erik@bjareho.lt](mailto:erik@bjareho.lt)
 
-[forum]: https://forum.activitywatch.net
-[github discussions]: https://github.com/ActivityWatch/activitywatch/discussions
+[forum]: https://forum.aceofwork.net
+[github discussions]: https://github.com/aceofwork/aceofwork/discussions
 [discord]: https://discord.gg/vDskV9q

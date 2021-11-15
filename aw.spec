@@ -15,7 +15,7 @@ current_release = subprocess.run(
     stderr=subprocess.STDOUT,
     encoding="utf8",
 ).stdout.strip()
-print("bundling activitywatch version " + current_release)
+print("bundling aceofwork version " + current_release)
 
 aw_core_path = Path(os.path.dirname(aw_core.__file__))
 restx_path = Path(os.path.dirname(flask_restx.__file__))
@@ -235,9 +235,9 @@ if platform.system() == "Darwin":
         aww_coll,
         awa_coll,
         aws_coll,
-        name="ActivityWatch.app",
+        name="aceofwork.app",
         icon=icon,
-        bundle_identifier="ActivityWatch",
+        bundle_identifier="aceofwork",
         # TODO: Get the right version here
         version=current_release,
         info_plist={
